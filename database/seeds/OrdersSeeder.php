@@ -19,6 +19,8 @@ class OrdersSeeder extends Seeder
                 'amount' =>$faker->numberBetween(2000,10000),
                 'quantity'=>$faker->numberBetween(1,10),
                 'users_id' => $faker->randomElement($users_id),
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s"),
                
 	        ]);
 	    }
