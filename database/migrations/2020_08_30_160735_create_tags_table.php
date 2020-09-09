@@ -16,8 +16,8 @@ class CreateTagsTable extends Migration
         Schema::create('tags', function (Blueprint $table) {
             $table->increments('id')->unsigned();
             $table->string('name');
-            $table->integer('categories_id')->unsigned();
-			$table->foreign('categories_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->integer('category_id')->unsigned();
+			$table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });
     }
 
