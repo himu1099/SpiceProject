@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,6 +12,18 @@
 |
 */
 
+
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/category','Crud\CategoryController@index');
+Route::post('/categoryadd','Crud\CategoryController@insert');
+Route::get('/product','Crud\CategoryController@getAll');
+Route::post('/productsave','Crud\ProductController@insert');
+Route::get('/productdata','Crud\ProductController@getAll');
+
+
+
+
