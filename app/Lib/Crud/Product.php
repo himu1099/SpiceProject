@@ -17,8 +17,7 @@ class Product{
                         return true;
                     } else {
                         return false;
-                    }   
-                    
+                    }     
                 }
                 catch(\Exception $e){
                     throw new \Exception('Product Not Insert !');

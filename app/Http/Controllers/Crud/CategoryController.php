@@ -21,8 +21,7 @@ class CategoryController extends Controller
                    return redirect('product');  
                }
                catch(\Exception $e){
-                   return redirect('category')->with('error',$e->getMessage());
-                  
+                   return redirect('category')->with('error',$e->getMessage()); 
                }
         }
 
