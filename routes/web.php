@@ -23,6 +23,8 @@ Route::post('/categoryadd','Crud\CategoryController@insert');
 Route::get('/product','Crud\CategoryController@getAll');
 Route::post('/productsave','Crud\ProductController@insert');
 Route::get('/productdata','Crud\ProductController@getAll');
+Route::post('/variants','Crud\VariantController@index');
+Route::post('variantsave','Crud\VariantController@insert');
 
 
 

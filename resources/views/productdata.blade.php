@@ -31,7 +31,9 @@
         <td>{{$data->price}}</td>
         <td>{{$data->quantity}}</td>
         <td>
-          <form method="" action="variants?{{$data->id}}">
+          <form method="Post" action="variants?id={{$data->id}}">
+            
+            @csrf
           <button type="submit" class="btn btn-warning">Add</button>
           </form>
         </td>
@@ -39,6 +41,17 @@
       @endforeach
     </tbody>
   </table>
+  @if(session()->has('error'))
+    <div class="alert alert-danger">
+        {{ session()->get('error') }}
+    </div>
+@endif
+
+@if(session()->has('info'))
+<div class="alert alert-info">
+    {{ session()->get('info') }}
+</div>
+@endif
 </div>
 
 </body>
