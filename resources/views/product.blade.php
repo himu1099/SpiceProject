@@ -60,6 +60,11 @@ $('.mdb-select').materialSelect();
    <div class="alert alert-info">{{ Session::get('message') }}</div>
 
 @endif
+@if (Session::has('info'))
+
+<div class="alert alert-info">{{ Session::get('info') }}</div>
+
+@endif
     @csrf
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>

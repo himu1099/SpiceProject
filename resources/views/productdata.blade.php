@@ -30,14 +30,7 @@
         <td>{{$data->name}}</td>
         <td>{{$data->price}}</td>
         <td>{{$data->quantity}}</td>
-        <td>
-          <form method="Post" action="variants?id={{$data->id}}">
-            
-            @csrf
-          <button type="submit" class="btn btn-warning">Add</button>
-          </form>
-        </td>
-      </tr>
+        <td><a href="variants/{{$data->id}}"> <button type="button" class="btn btn-warning">Add</button></a></td>
       @endforeach
     </tbody>
   </table>
@@ -51,6 +44,11 @@
 <div class="alert alert-info">
     {{ session()->get('info') }}
 </div>
+@endif
+@if (Session::has('message'))
+
+<div class="alert alert-info">{{ Session::get('message') }}</div>
+
 @endif
 </div>
 

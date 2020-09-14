@@ -21,12 +21,14 @@ class ProductController extends Controller
                 ]);
                 try{
                     $data=Product::insert($name,$category,$quantity,$price);
-                    return redirect("product")->with('message',"Product Save");
+                    return redirect("productdata")->with('message',"Product Save");
                 }
                 catch(\Exception $e){
+                    
                     return redirect("product")->with('error',$e->getMessage());
                 }
         }
+        
         public function getAll(){
                 try {
                     $data=Product::getAll();
@@ -35,5 +37,6 @@ class ProductController extends Controller
                     return redirect('product')->with('error', $e->getMessage());
                 }
         }
+      
    
 }

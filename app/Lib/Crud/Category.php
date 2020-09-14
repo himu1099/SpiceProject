@@ -1,7 +1,7 @@
 <?php
  
  namespace App\Lib\Crud;
- use App\Model\Category as Model;
+ use App\Models\Category as Model;
  use App\Http\Controllers\Crud\CategoryController;
 use Illuminate\Support\Facades\Log;
 
@@ -36,9 +36,5 @@ class Category{
             }    
          }
            
-
-
-
-
 
  }

@@ -11,14 +11,14 @@ use App\Lib\Crud\Category;
 class CategoryController extends Controller
 {
         public function index(){
-            return view('categoryadd');
+              return view('categoryadd');
         }
 
         public function insert(Request $request){
                try {
                    $name=$request->cname;
                    $data=Category::insert($name);
-                   return redirect('product');  
+                   return redirect('product')->with('info','Category Add');  
                }
                catch(\Exception $e){
                    return redirect('category')->with('error',$e->getMessage()); 
